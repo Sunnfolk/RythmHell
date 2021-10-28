@@ -18,47 +18,58 @@ namespace Notes
         public enum State
         {
             LeftRight,
-            Thumbs
-        };
+            Thumbs,
+        }
+        
         public State inputSettings;
         /*  Left : Q W E R 
          *  Right: U I O P
          *  Mix  : E R U I
          *  Thumb: Q ALT < P
          */
-        
-        
-        // Update is called once per frame
-        void Update()
-        {
-            switch (inputSettings)
-            {
-                case State.LeftRight:
-                    LeftRight();
-                    break;
-                case State.Thumbs:
-                    Thumbs();
-                    break;
-            }
 
-            pause = Keyboard.current.escapeKey.wasPressedThisFrame;
+        private void Update()
+        {
+            if (Keyboard.current.qKey.wasPressedThisFrame)
+            {
+                print("test");
+            }
         }
 
-        private void LeftRight()
+
+        // Update is called once per frame
+        /*void Update()
         {
+            pause = Keyboard.current.escapeKey.wasPressedThisFrame;
+            if (inputSettings == State.LeftRight)
+            {
+                print("hello again");
+                LeftRight();
+            }
+            else if (inputSettings == State.Thumbs)
+            {
+                Thumbs();
+            }
+
+            
+        }*/
+
+        public void LeftRight()
+        {
+            print("Hello?");
             // Left for Right and Left Hand (Thumb)
-            leftLeft = (Keyboard.current.qKey.wasPressedThisFrame || Keyboard.current.uKey.wasPressedThisFrame);
-            leftMiddle = (Keyboard.current.wKey.wasPressedThisFrame || Keyboard.current.iKey.wasPressedThisFrame || Keyboard.current.leftAltKey.wasPressedThisFrame);
+            leftLeft = Keyboard.current.qKey.wasPressedThisFrame || Keyboard.current.uKey.wasPressedThisFrame;
+            leftMiddle = Keyboard.current.wKey.wasPressedThisFrame || Keyboard.current.iKey.wasPressedThisFrame || Keyboard.current.leftAltKey.wasPressedThisFrame;
             
             
             // Right for Right and Left Hand (Thumb)
-            rightMiddle = (Keyboard.current.eKey.wasPressedThisFrame || Keyboard.current.oKey.wasPressedThisFrame || Keyboard.current.rightAltKey.wasPressedThisFrame);
-            rightRight = (Keyboard.current.rKey.wasPressedThisFrame || Keyboard.current.pKey.wasPressedThisFrame);
+            rightMiddle = Keyboard.current.eKey.wasPressedThisFrame || Keyboard.current.oKey.wasPressedThisFrame || Keyboard.current.rightAltKey.wasPressedThisFrame;
+            rightRight = Keyboard.current.rKey.wasPressedThisFrame || Keyboard.current.pKey.wasPressedThisFrame;
 
             //DebugPrint();
         }
 
-        private void Thumbs()
+        public void Thumbs()
         {
             // Left 2
             leftLeft = Keyboard.current.qKey.wasPressedThisFrame;

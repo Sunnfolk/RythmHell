@@ -5,10 +5,10 @@ using UnityEngine;
 
 public class ActivateZone : MonoBehaviour
 {
-    private InputSystem m_InputSystem;
+    private SystemInput m_InputSystem;
     void Awake()
     {
-        m_InputSystem = GetComponent<InputSystem>();
+        m_InputSystem = GetComponent<SystemInput>();
     }
     
     void Update()
