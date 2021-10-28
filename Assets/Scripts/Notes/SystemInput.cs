@@ -28,22 +28,14 @@ namespace Notes
          *  Thumb: Q ALT < P
          */
 
-        private void Update()
-        {
-            if (Keyboard.current.qKey.wasPressedThisFrame)
-            {
-                print("test");
-            }
-        }
-
 
         // Update is called once per frame
-        /*void Update()
+        void Update()
         {
             pause = Keyboard.current.escapeKey.wasPressedThisFrame;
             if (inputSettings == State.LeftRight)
             {
-                print("hello again");
+                
                 LeftRight();
             }
             else if (inputSettings == State.Thumbs)
@@ -52,11 +44,10 @@ namespace Notes
             }
 
             
-        }*/
-
+        }
+        
         public void LeftRight()
         {
-            print("Hello?");
             // Left for Right and Left Hand (Thumb)
             leftLeft = Keyboard.current.qKey.wasPressedThisFrame || Keyboard.current.uKey.wasPressedThisFrame;
             leftMiddle = Keyboard.current.wKey.wasPressedThisFrame || Keyboard.current.iKey.wasPressedThisFrame || Keyboard.current.leftAltKey.wasPressedThisFrame;

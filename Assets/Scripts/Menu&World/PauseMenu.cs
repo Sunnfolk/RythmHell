@@ -1,8 +1,6 @@
-using System;
 using Notes;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Serialization;
 
 namespace Menu_World
 {
@@ -11,12 +9,6 @@ namespace Menu_World
         public static bool GameIsPaused;
         public GameObject pauseMenuUI;
         public SystemInput inputSystem;
-
-
-        private void Start()
-        {
-            inputSystem = GetComponent<SystemInput>();
-        }
 
         void Update()
         {
