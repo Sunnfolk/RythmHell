@@ -8,7 +8,7 @@ public class SceneController : MonoBehaviour
     
     public void LoadScene(string scene)
     {
-        if (PauseMenu !=null)
+        if (PauseMenu != null)
         {
             if (PauseMenu.GameIsPaused)
             {
@@ -16,6 +16,11 @@ public class SceneController : MonoBehaviour
             }
         }
         SceneManager.LoadScene(scene);
+    }
+
+    public void ReloadScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().ToString());
     }
 
     public void QuitGame()
