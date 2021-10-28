@@ -1648,6 +1648,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BadParticle
       objectReference: {fileID: 0}
+    - target: {fileID: 2056250218168489990, guid: 5edfb173922c72d4f92e914bc29b8b01, type: 3}
+      propertyPath: playOnAwake
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2056250218168489991, guid: 5edfb173922c72d4f92e914bc29b8b01, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -1701,6 +1705,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3262727052719597156, guid: c2dc69fb42c556a41b3a3a5e1e0eba85, type: 3}
+      propertyPath: playOnAwake
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3262727052719597157, guid: c2dc69fb42c556a41b3a3a5e1e0eba85, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -1758,6 +1766,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3661102828116143809, guid: bb26d347f63817143b4880e8bd058edf, type: 3}
+      propertyPath: playOnAwake
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3661102828116143810, guid: bb26d347f63817143b4880e8bd058edf, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -1817,7 +1829,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5293096616277433778, guid: 398200552db3fb94da6ecec920be2afc, type: 3}
       propertyPath: m_Name
-      value: NoteParticle
+      value: RedNoteParticle
       objectReference: {fileID: 0}
     - target: {fileID: 5293096616277433781, guid: 398200552db3fb94da6ecec920be2afc, type: 3}
       propertyPath: m_RootOrder
@@ -1872,6 +1884,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7093950926874521028, guid: c48094d009ee13f4887e75d9563a82f4, type: 3}
+      propertyPath: playOnAwake
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7093950926874521031, guid: c48094d009ee13f4887e75d9563a82f4, type: 3}
       propertyPath: m_RootOrder
       value: 9

@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 9714c48814ee29841a19e6b8a93c2e69
+  - enabled: 1
+    path: Assets/Scenes/TestScenes/ErlendTest.unity
+    guid: 18954bbbd89dd1c4cbf0235d77603f44
   m_configObjects: {}

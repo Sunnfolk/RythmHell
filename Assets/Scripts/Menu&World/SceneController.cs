@@ -21,7 +21,15 @@ namespace Menu_World
 
         public void ReloadScene()
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().ToString());
+            if (PauseMenu != null)
+            {
+                if (PauseMenu.GameIsPaused)
+                {
+                    PauseMenu.Resume();
+                }
+            }
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            //print(SceneManager.GetActiveScene().name);
         }
 
         public void QuitGame()

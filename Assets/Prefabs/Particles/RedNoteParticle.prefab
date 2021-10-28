@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5293096616277433780}
   - component: {fileID: 5293096616277433779}
   m_Layer: 0
-  m_Name: NoteParticle
+  m_Name: RedNoteParticle
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
