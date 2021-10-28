@@ -36,6 +36,7 @@ sysinfo.txt
 *.apk
 *.unitypackage
 *.log
+<<<<<<< Updated upstream
 Logs/shadercompiler-UnityShaderCompiler.exe0.log
 Logs/shadercompiler-UnityShaderCompiler.exe1.log
 Logs/shadercompiler-UnityShaderCompiler.exe10.log
@@ -66,3 +67,5 @@ Logs/shadercompiler-UnityShaderCompiler.exe7.log
 Logs/shadercompiler-UnityShaderCompiler.exe8.log
 Logs/shadercompiler-UnityShaderCompiler.exe9.log
 *.log
+=======
+>>>>>>> Stashed changes
