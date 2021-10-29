@@ -1,3 +1,4 @@
+using Menu_World;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -32,6 +33,7 @@ namespace Notes
         // Update is called once per frame
         void Update()
         {
+            if (PauseMenu.GameIsPaused) return;
             pause = Keyboard.current.escapeKey.wasPressedThisFrame;
             if (inputSettings == State.LeftRight)
             {
