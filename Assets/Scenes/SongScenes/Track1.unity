@@ -1329,6 +1329,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7567297209970133594, guid: 697d9c1b028abca41a49811a74d26224, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 3c700bda0d0774b42ba28720deb039a6, type: 2}
+    - target: {fileID: 7567297209970133594, guid: 697d9c1b028abca41a49811a74d26224, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 751382780866961669, guid: 3c700bda0d0774b42ba28720deb039a6, type: 2}
+    - target: {fileID: 7567297210040148458, guid: 697d9c1b028abca41a49811a74d26224, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 3c700bda0d0774b42ba28720deb039a6, type: 2}
+    - target: {fileID: 7567297210040148458, guid: 697d9c1b028abca41a49811a74d26224, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 751382780866961669, guid: 3c700bda0d0774b42ba28720deb039a6, type: 2}
+    - target: {fileID: 7567297211200344103, guid: 697d9c1b028abca41a49811a74d26224, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 3c700bda0d0774b42ba28720deb039a6, type: 2}
+    - target: {fileID: 7567297211200344103, guid: 697d9c1b028abca41a49811a74d26224, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 751382780866961669, guid: 3c700bda0d0774b42ba28720deb039a6, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 697d9c1b028abca41a49811a74d26224, type: 3}
 --- !u!114 &948368134 stripped
