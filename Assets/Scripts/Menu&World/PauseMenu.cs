@@ -8,6 +8,7 @@ namespace Menu_World
     {
         public static bool GameIsPaused;
         public GameObject pauseMenuUI;
+        public AudioSource music;
 
         void Update()
         {
@@ -27,6 +28,7 @@ namespace Menu_World
         public void Resume()
         {
             pauseMenuUI.SetActive(false);
+            music.Play();
             Time.timeScale = 1f;
             GameIsPaused = false;
         }
@@ -35,6 +37,7 @@ namespace Menu_World
         {
             pauseMenuUI.SetActive(true);
             Time.timeScale = 0f;
+            music.Pause();
             GameIsPaused = true;
         }
     }
