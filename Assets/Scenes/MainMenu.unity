@@ -1989,3 +1989,4 @@ MonoBehaviour:
   muteButton: {fileID: 704407039}
   muteSprite: {fileID: 21300000, guid: 7ee38cc2bde1f754d8006ac60c155ab4, type: 3}
   unMuteSprite: {fileID: 21300000, guid: 9dd0845ea67b0374cbe662edc1124a71, type: 3}
+  Music: {fileID: 24100000, guid: a3d676c654182ac4bb9de055d016e477, type: 2}
