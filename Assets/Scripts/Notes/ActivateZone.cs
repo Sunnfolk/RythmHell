@@ -41,10 +41,13 @@ namespace Notes
         
         //Location of the TriggerZones
         [Header("Positions")]
-        [SerializeField] private Transform leftLeftPosition;
-        [SerializeField] private Transform leftMiddlePosition;
-        [SerializeField] private Transform rightMiddlePosition;
-        [SerializeField] private Transform rightRightPosition;
+        [SerializeField] private GameObject leftLeftPosition;
+        [SerializeField] private GameObject leftMiddlePosition;
+        [SerializeField] private GameObject rightMiddlePosition;
+        [SerializeField] private GameObject rightRightPosition;
+        [SerializeField] private GameObject[] positions;
+        
+        [SerializeField] private GameObject missPosition;
     
         void Awake()
         {
@@ -55,24 +58,27 @@ namespace Notes
         {
             if (m_InputSystem.leftLeft)
             {
-                CheckTiming(leftLeftPosition.position);
+                CheckTiming(leftLeftPosition.transform.position);
             }
 
             if (m_InputSystem.leftMiddle)
             {
-                CheckTiming(leftMiddlePosition.position);
+                CheckTiming(leftMiddlePosition.transform.position);
             }
 
             if (m_InputSystem.rightMiddle)
             {
-                CheckTiming(rightMiddlePosition.position);
+                CheckTiming(rightMiddlePosition.transform.position);
             }
 
             if (m_InputSystem.rightRight)
             {
-                CheckTiming(rightRightPosition.position);
+                CheckTiming(rightRightPosition.transform.position);
             }
+            Miss();
+            TextUpdates();
         }
+        // Checks the timings of the button presses, and sends the results on down the line.
         private void CheckTiming(Vector3 position)
         {
             for (int i = 0; i < notes.Count; i++)
@@ -94,15 +100,29 @@ namespace Notes
                         Destroy(notes[i]);
                         notes.RemoveAt(i);
                         ScoreRangeInput("Good");
-                        //print("gooooot!!!!!");
+                        //print("good!!!!!");
                     }
                     else if (Math.Abs(notes[i].transform.position.y - position.y) < badRange)
                     {
                         Destroy(notes[i]);
                         notes.RemoveAt(i);
                         ScoreRangeInput("Bad");
-                        //print("bad wut tf u doin!!!!!");
+                        //print("bad wut tf u doing!!!!!");
                     }
+                }
+            }
+        }
+        
+        // If you don't hit the notes
+        private void Miss()
+        {
+            for (int i = 0; i < notes.Count; i++)
+            {
+                if (notes[i].transform.position.y <= missPosition.transform.position.y)
+                {
+                    Destroy(notes[i]);
+                    notes.RemoveAt(i);
+                    ScoreRangeInput("Miss");
                 }
             }
         }
@@ -148,18 +168,11 @@ namespace Notes
             if (comboRange is "Bad" or "Miss")
             {
                 comboCounter = 0;
-                
-                if (comboRange == "Miss")
-                {
-                    Score("Miss");
-                }
-                else
-                {
-                    Score("Bad");
-                }
+
+                Score(comboRange == "Miss" ? "Miss" : "Bad");
             }
 
-            comboText.text = comboCounter.ToString();
+            //comboText.text = comboCounter.ToString();
             
             if (comboCounter >= 50)
             {
@@ -177,12 +190,12 @@ namespace Notes
             {
                 comboMultiplier = 1;
             }
-            comboMultiplierText.text = comboMultiplier.ToString();
+            //comboMultiplierText.text = comboMultiplier.ToString();
         }
         
         
         // SCORE FROM COMBO //
-        public void Score(string scoreRange)
+        private void Score(string scoreRange)
         {
             if (scoreRange == "Perfect")
             {
@@ -201,9 +214,14 @@ namespace Notes
             {
                 
             }
-
+            //scoreText.text = scoreCounter + " P";
+        }
+        //Updates Text
+        private void TextUpdates()
+        {
+            comboText.text = comboCounter.ToString();
+            comboMultiplierText.text = comboMultiplier.ToString();
             scoreText.text = scoreCounter + " P";
         }
-        
     }
 }
