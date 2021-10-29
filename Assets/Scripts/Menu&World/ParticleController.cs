@@ -4,16 +4,27 @@ namespace Menu_World
 {
     public class ParticleController : MonoBehaviour
     {
-        public ParticleSystem redNote;
+        public ParticleSystem[] noteParticles;
+        
+        public ParticleSystem[] qualityParticles;
+
+        public void PlayNoteParticle(int lane)
+        {
+            noteParticles[lane].Play();
+        }
+        public void PlayQualityParticle(int quality)
+        {
+            qualityParticles[quality].Play();
+        }
+        /*public ParticleSystem redNote;
         public ParticleSystem blueNote;
         public ParticleSystem greenNote;
-        public ParticleSystem yellowNote;
-        
-        public ParticleSystem miss;
+        public ParticleSystem yellowNote;*/
+        /*public ParticleSystem miss;
         public ParticleSystem bad;
         public ParticleSystem good;
-        public ParticleSystem perfect;
-
+        public ParticleSystem perfect;*/
+        /*
         public void RedNoteParticle()
         {
             redNote.Play();
@@ -30,7 +41,7 @@ namespace Menu_World
         {
             yellowNote.Play();
         }
-        
+        */ /*
         public void MissParticle()
         {
             miss.Play();
@@ -47,5 +58,6 @@ namespace Menu_World
         {
             perfect.Play();
         }
+        */
     }
 }

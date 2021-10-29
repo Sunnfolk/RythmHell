@@ -1,6 +1,8 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using Effects;
+using Menu_World;
 using TMPro;
 using UnityEngine;
 
@@ -11,6 +13,8 @@ namespace Notes
         // Lists
         [Header("Lists")]
         public List<GameObject> notes;
+        public GameObject[] laneEffects;
+        [SerializeField] private float laneEffectTimer = 0.25f;
 
         
         // Ranges for different scores
@@ -48,14 +52,14 @@ namespace Notes
     
         // Components
         private SystemInput m_InputSystem;
-        
-        
+
+        private ParticleController m_Particle;
         private SoundEffects m_Sound;
         
         private void Awake()
         {
             m_InputSystem = GetComponent<SystemInput>();
-            
+            m_Particle = GetComponent<ParticleController>();
             
             m_Sound = GetComponent<SoundEffects>();
         }
@@ -65,28 +69,47 @@ namespace Notes
             // Todo: LightEffects for button presses
             if (m_InputSystem.leftLeft)
             {
-                CheckTiming(leftLeftPosition.transform.position);
+                CheckTiming(leftLeftPosition.transform.position, 0);
+                StartCoroutine(EffectActive(0, 1));
+                
             }
 
             if (m_InputSystem.leftMiddle)
             {
-                CheckTiming(leftMiddlePosition.transform.position);
+                CheckTiming(leftMiddlePosition.transform.position, 1);
+                StartCoroutine(EffectActive(2, 3));
             }
 
             if (m_InputSystem.rightMiddle)
             {
-                CheckTiming(rightMiddlePosition.transform.position);
+                CheckTiming(rightMiddlePosition.transform.position, 2);
+                StartCoroutine(EffectActive(4, 5));
             }
 
             if (m_InputSystem.rightRight)
             {
-                CheckTiming(rightRightPosition.transform.position);
+                CheckTiming(rightRightPosition.transform.position, 3);
+                StartCoroutine(EffectActive(6, 7));
             }
             Miss();
             TextUpdates();
+            //for (int i = 0; i < laneEffects.Length; i++)
+            //{
+              //  laneEffects[i].SetActive(false);
+            //}
         }
+
+        private IEnumerator EffectActive(int light, int sprite)
+        {
+            laneEffects[light].SetActive(true);
+            laneEffects[sprite].SetActive(true);
+            yield return new WaitForSeconds(laneEffectTimer);
+            laneEffects[light].SetActive(false);
+            laneEffects[sprite].SetActive(false);
+        }
+            
         // Checks the timings of the button presses, and sends the results on down the line.
-        private void CheckTiming(Vector3 position)
+        private void CheckTiming(Vector3 position, int lane)
         {
             for (int i = 0; i < notes.Count; i++)
             {
@@ -94,28 +117,35 @@ namespace Notes
                 {
                     if (Math.Abs(notes[i].transform.position.y - position.y) < perfectRange)
                     {
-                        // TODO: Particle here
-                        // TODO: Sound Effects Here ??DONE??
+                        m_Particle.noteParticles[lane].transform.position = notes[i].transform.position;
+                        m_Particle.PlayNoteParticle(lane);
 
-                        Destroy(notes[i]);
-                        notes.RemoveAt(i);
+                        //Destroy(notes[i]);
+                        //notes.RemoveAt(i);
 
-
-                        ScoreRangeInput("Perfect");
+                        ScoreRangeInput(1);
                         //print("Perfect!!!!!");
                     }
                     else if (Math.Abs(notes[i].transform.position.y - position.y) < goodRange)
                     {
+                        m_Particle.noteParticles[lane].transform.position = notes[i].transform.position;
+                        m_Particle.PlayNoteParticle(lane);
+                        
                         Destroy(notes[i]);
                         notes.RemoveAt(i);
-                        ScoreRangeInput("Good");
+                        
+                        ScoreRangeInput(2);
                         //print("good!!!!!");
                     }
                     else if (Math.Abs(notes[i].transform.position.y - position.y) < badRange)
                     {
+                        m_Particle.noteParticles[lane].transform.position = notes[i].transform.position;
+                        m_Particle.PlayNoteParticle(lane);
+                        
                         Destroy(notes[i]);
                         notes.RemoveAt(i);
-                        ScoreRangeInput("Bad");
+                        
+                        ScoreRangeInput(3);
                         //print("bad wut tf u doing!!!!!");
                     }
                 }
@@ -132,31 +162,35 @@ namespace Notes
                     Destroy(notes[i]);
                     notes.RemoveAt(i);
                     Combo("Miss");
+                    ScoreRangeInput(0);
+                    
+                    m_Particle.PlayQualityParticle(0);
                 }
             }
         }
         
         // SCORE INPUTS //
-        private void ScoreRangeInput(string scoreRange)
+        private void ScoreRangeInput(int scoreRange)
         {
             m_Sound.HitSound();
             
-            if (scoreRange == "Perfect")
+            m_Particle.PlayQualityParticle(scoreRange);
+            if (scoreRange == 1)
             {
                 // TODO: Spawn The Word Sprites plus Particles When they're Hit
                 Combo("Perfect");
             }
-            if (scoreRange == "Good")
+            if (scoreRange == 2)
             {
                 Combo("Good");
             }
-            if (scoreRange == "Bad")
+            if (scoreRange == 3)
             {
                 Combo("Bad");
             }
-            if (scoreRange == "Miss")
+            if (scoreRange == 0)
             {
-                Combo("Miss");
+                //Combo("Miss");
             }
         }
         

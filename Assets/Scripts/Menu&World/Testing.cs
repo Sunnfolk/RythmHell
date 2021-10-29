@@ -7,6 +7,7 @@ using UnityEngine.InputSystem;
 
 public class Testing : MonoBehaviour
 {
+    /*
     public ParticleSystem rednote;
     public ParticleController test;
 
@@ -18,4 +19,5 @@ public class Testing : MonoBehaviour
             test.RedNoteParticle();
         }
     }
+    */
 }
