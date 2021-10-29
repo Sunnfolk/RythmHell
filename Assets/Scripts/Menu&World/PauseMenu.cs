@@ -8,7 +8,6 @@ namespace Menu_World
     {
         public static bool GameIsPaused;
         public GameObject pauseMenuUI;
-        public SystemInput inputSystem;
 
         void Update()
         {

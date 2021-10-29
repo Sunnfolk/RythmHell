@@ -1,7 +1,5 @@
-using System;
 using System.Collections;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.Rendering.Universal;
 
 namespace Menu_World
@@ -15,15 +13,7 @@ namespace Menu_World
         {
             m_FailLight = GetComponent<Light2D>();
         }
-
-        private void Update()
-        {
-            if (Keyboard.current.eKey.wasPressedThisFrame)
-            {
-                FadeLights();
-            }
-        }
-
+        
         public void FadeLights()
         {
             StartCoroutine(nameof(Timer));
