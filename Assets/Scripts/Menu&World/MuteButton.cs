@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.UI;
 
 namespace Menu_World
@@ -9,6 +10,7 @@ namespace Menu_World
         public Button muteButton;
         public Sprite muteSprite;
         public Sprite unMuteSprite;
+        public AudioMixer Music;
 
         public void MutePress()
         {
@@ -26,11 +28,13 @@ namespace Menu_World
         {
             muteButton.GetComponent<Image>().sprite = muteSprite;
             isMuted = true;
+            Music.SetFloat("MusicVol",10f);
         }
         public void UnMute()
         {
             muteButton.GetComponent<Image>().sprite = unMuteSprite;
             isMuted = false;
+            Music.SetFloat("MusicVol",0f);
         }
     }
 }
