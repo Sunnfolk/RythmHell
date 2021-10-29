@@ -1,8 +1,6 @@
-using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
-using UnityEngine.Serialization;
 
 namespace Menu_World
 {
@@ -10,7 +8,7 @@ namespace Menu_World
     {
         public GameObject credits;
         //public GameObject text;
-        public GameObject crossButton;
+        //public GameObject crossButton;
         public PauseMenu pauseMenu;
         private bool m_IsActive;
 
@@ -40,14 +38,14 @@ namespace Menu_World
             if (m_IsActive)
             {
                 //text.SetActive(false);
-                crossButton.SetActive(false);
+                //crossButton.SetActive(false);
                 credits.SetActive(false);
                 m_IsActive = false;
             }
             else
             {
                 credits.SetActive(true);
-                crossButton.SetActive(true);
+                //crossButton.SetActive(true);
                 m_IsActive = true;
                 //StartCoroutine(nameof(Timer));
             }
