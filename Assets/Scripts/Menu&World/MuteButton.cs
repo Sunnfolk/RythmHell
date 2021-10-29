@@ -28,13 +28,15 @@ namespace Menu_World
         {
             muteButton.GetComponent<Image>().sprite = muteSprite;
             isMuted = true;
-            Music.SetFloat("MusicVol",10f);
+            Music.SetFloat("MenuVol", -80f);
+            Music.SetFloat("MusicVol",20f);
         }
         public void UnMute()
         {
             muteButton.GetComponent<Image>().sprite = unMuteSprite;
             isMuted = false;
-            Music.SetFloat("MusicVol",0f);
+            Music.SetFloat("MusicVol",-10f);
+            Music.SetFloat("MenuVol", -10f);
         }
     }
 }
