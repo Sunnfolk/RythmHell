@@ -200,7 +200,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &138486162
 Transform:
   m_ObjectHideFlags: 0
@@ -940,7 +940,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7178180369640706785, guid: b83c71c34e632e44fa7d7c4e26f24528, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7497668817738489642, guid: b83c71c34e632e44fa7d7c4e26f24528, type: 3}
       propertyPath: m_Intensity
@@ -2376,7 +2376,7 @@ PrefabInstance:
     - target: {fileID: 6017629325971450617, guid: 448f9d5eea8ec044ca555f92c52fd88e, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8300000, guid: 0dd8587770cb4c64786d986ed4f60ef3, type: 3}
     - target: {fileID: 6017629326342364428, guid: 448f9d5eea8ec044ca555f92c52fd88e, type: 3}
       propertyPath: bpm
       value: 1
@@ -2390,6 +2390,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6017629326939092712, guid: 448f9d5eea8ec044ca555f92c52fd88e, type: 3}
+      propertyPath: mapData
+      value: 
+      objectReference: {fileID: 1540533139}
+    - target: {fileID: 6017629326939092712, guid: 448f9d5eea8ec044ca555f92c52fd88e, type: 3}
       propertyPath: hitPoint
       value: 
       objectReference: {fileID: 1060879494}
@@ -2400,13 +2404,14 @@ PrefabInstance:
     - target: {fileID: 6017629326939092715, guid: 448f9d5eea8ec044ca555f92c52fd88e, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8300000, guid: 0dd8587770cb4c64786d986ed4f60ef3, type: 3}
     - target: {fileID: 7318883121407800483, guid: 448f9d5eea8ec044ca555f92c52fd88e, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6017629326342364428, guid: 448f9d5eea8ec044ca555f92c52fd88e, type: 3}
+    - {fileID: 6017629325971450616, guid: 448f9d5eea8ec044ca555f92c52fd88e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 448f9d5eea8ec044ca555f92c52fd88e, type: 3}
 --- !u!4 &1540533137 stripped
 Transform:
@@ -2427,7 +2432,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1540533138}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97a1e016cc20ebf4e8fde35fe9a13921, type: 3}
+  m_Script: {fileID: 11500000, guid: 8e9cfadc7ca8310488833e9649859826, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   song: {fileID: 8300000, guid: 0dd8587770cb4c64786d986ed4f60ef3, type: 3}
@@ -2435,892 +2440,892 @@ MonoBehaviour:
   waitSecondsBeforeFirstNote: 0
   laneAmount: 4
   mapData:
-  - spawnInLane: []
+  - spawnInLane: 
     fractionCount: 3
     waitFraction: 2
-  - spawnInLane: 
+  - spawnInLane: 0003
     fractionCount: 1
     waitFraction: 2
-  - spawnInLane: "\x01"
+  - spawnInLane: 01
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x02"
+  - spawnInLane: 02
     fractionCount: 1
     waitFraction: 4
-  - spawnInLane: "\x03"
+  - spawnInLane: 03
     fractionCount: 3
     waitFraction: 8
-  - spawnInLane: "\x03"
+  - spawnInLane: 03
     fractionCount: 1
     waitFraction: 4
-  - spawnInLane: "\x01\x03"
+  - spawnInLane: 0103
     fractionCount: 1
     waitFraction: 2
-  - spawnInLane: 
+  - spawnInLane: 0002
     fractionCount: 1
     waitFraction: 2
-  - spawnInLane: 
+  - spawnInLane: 0003
     fractionCount: 1
     waitFraction: 4
-  - spawnInLane: "\x01"
+  - spawnInLane: 01
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x02"
+  - spawnInLane: 02
     fractionCount: 3
     waitFraction: 8
-  - spawnInLane: "\x02"
+  - spawnInLane: 02
     fractionCount: 1
     waitFraction: 4
-  - spawnInLane: "\x01\x03"
+  - spawnInLane: 0103
     fractionCount: 1
     waitFraction: 2
-  - spawnInLane: 
+  - spawnInLane: 0002
     fractionCount: 1
     waitFraction: 2
-  - spawnInLane: "\x02"
+  - spawnInLane: 02
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x01"
+  - spawnInLane: 01
     fractionCount: 1
     waitFraction: 4
-  - spawnInLane: "\x03"
+  - spawnInLane: 03
     fractionCount: 3
     waitFraction: 8
-  - spawnInLane: "\x02"
+  - spawnInLane: 02
     fractionCount: 1
     waitFraction: 4
-  - spawnInLane: "\x01"
+  - spawnInLane: 01
     fractionCount: 1
     waitFraction: 2
-  - spawnInLane: 
+  - spawnInLane: 0003
     fractionCount: 1
     waitFraction: 2
-  - spawnInLane: "\x03"
+  - spawnInLane: 03
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x02"
+  - spawnInLane: 02
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x01"
+  - spawnInLane: 01
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: 
+  - spawnInLane: 00
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x02"
+  - spawnInLane: 02
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: 
+  - spawnInLane: 00
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x03"
+  - spawnInLane: 03
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x01"
+  - spawnInLane: 01
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x03"
+  - spawnInLane: 03
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x02"
+  - spawnInLane: 02
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x01"
+  - spawnInLane: 01
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: 
+  - spawnInLane: 00
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x02"
+  - spawnInLane: 02
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: 
+  - spawnInLane: 00
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x03"
+  - spawnInLane: 03
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x01"
+  - spawnInLane: 01
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x03"
+  - spawnInLane: 03
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x02"
+  - spawnInLane: 02
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x01"
+  - spawnInLane: 01
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: 
+  - spawnInLane: 00
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x02"
+  - spawnInLane: 02
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: 
+  - spawnInLane: 00
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x03"
+  - spawnInLane: 03
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x01"
+  - spawnInLane: 01
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x03"
+  - spawnInLane: 03
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x02"
+  - spawnInLane: 02
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x01"
+  - spawnInLane: 01
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: 
+  - spawnInLane: 00
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x02"
+  - spawnInLane: 02
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: 
+  - spawnInLane: 00
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x03"
+  - spawnInLane: 03
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x01"
+  - spawnInLane: 01
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x03\x01"
+  - spawnInLane: 0301
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x02"
+  - spawnInLane: 02
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x01"
+  - spawnInLane: 01
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: 
+  - spawnInLane: 00
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x01\x03"
+  - spawnInLane: 0103
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x02"
+  - spawnInLane: 02
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x01\x03"
+  - spawnInLane: 0103
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: 
+  - spawnInLane: 00
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x01\x03"
+  - spawnInLane: 0103
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x02"
+  - spawnInLane: 02
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x01"
+  - spawnInLane: 01
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: 
+  - spawnInLane: 00
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x01\x03"
+  - spawnInLane: 0103
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x02"
+  - spawnInLane: 02
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x01\x03"
+  - spawnInLane: 0103
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: 
+  - spawnInLane: 00
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x01\x03"
+  - spawnInLane: 0103
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x02"
+  - spawnInLane: 02
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x01"
+  - spawnInLane: 01
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: 
+  - spawnInLane: 00
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x01\x03"
+  - spawnInLane: 0103
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x02"
+  - spawnInLane: 02
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x01\x03"
+  - spawnInLane: 0103
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: 
+  - spawnInLane: 00
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x01\x03"
+  - spawnInLane: 0103
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x02"
+  - spawnInLane: 02
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x01"
+  - spawnInLane: 01
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: 
+  - spawnInLane: 00
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x01\x03"
+  - spawnInLane: 0103
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x02"
+  - spawnInLane: 02
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x01"
+  - spawnInLane: 01
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: 
+  - spawnInLane: 00
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: 
+  - spawnInLane: 00
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x01"
+  - spawnInLane: 01
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x02"
+  - spawnInLane: 02
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x03"
+  - spawnInLane: 03
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x03"
+  - spawnInLane: 03
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x01"
+  - spawnInLane: 01
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x02"
+  - spawnInLane: 02
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: 
+  - spawnInLane: 00
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: 
+  - spawnInLane: 00
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x01"
+  - spawnInLane: 01
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x02"
+  - spawnInLane: 02
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x03"
+  - spawnInLane: 03
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x03"
+  - spawnInLane: 03
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x01"
+  - spawnInLane: 01
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x02"
+  - spawnInLane: 02
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: 
+  - spawnInLane: 00
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: 
+  - spawnInLane: 00
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x01"
+  - spawnInLane: 01
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x02"
+  - spawnInLane: 02
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x03"
+  - spawnInLane: 03
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x03"
+  - spawnInLane: 03
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x01"
+  - spawnInLane: 01
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x02"
+  - spawnInLane: 02
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: 
+  - spawnInLane: 00
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: 
+  - spawnInLane: 00
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x01"
+  - spawnInLane: 01
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x02"
+  - spawnInLane: 02
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x03"
+  - spawnInLane: 03
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x03"
+  - spawnInLane: 03
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x01"
+  - spawnInLane: 01
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x02"
+  - spawnInLane: 02
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: 
+  - spawnInLane: 00
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: 
+  - spawnInLane: 00
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x01"
+  - spawnInLane: 01
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x02"
+  - spawnInLane: 02
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x03"
+  - spawnInLane: 03
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x03"
+  - spawnInLane: 03
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x01"
+  - spawnInLane: 01
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x02"
+  - spawnInLane: 02
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: 
+  - spawnInLane: 00
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: 
+  - spawnInLane: 00
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x01"
+  - spawnInLane: 01
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x02"
+  - spawnInLane: 02
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x03"
+  - spawnInLane: 03
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x03"
+  - spawnInLane: 03
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x01"
+  - spawnInLane: 01
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x02"
+  - spawnInLane: 02
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: 
+  - spawnInLane: 00
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: 
+  - spawnInLane: 00
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x01"
+  - spawnInLane: 01
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x02"
+  - spawnInLane: 02
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x03"
+  - spawnInLane: 03
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x03"
+  - spawnInLane: 03
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x01"
+  - spawnInLane: 01
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x02"
+  - spawnInLane: 02
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: 
+  - spawnInLane: 00
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: 
+  - spawnInLane: 00
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x01"
+  - spawnInLane: 01
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x02"
+  - spawnInLane: 02
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x03"
+  - spawnInLane: 03
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x03"
+  - spawnInLane: 03
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x01"
+  - spawnInLane: 01
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: "\x02"
+  - spawnInLane: 02
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: 
+  - spawnInLane: 00
     fractionCount: 1
     waitFraction: 8
-  - spawnInLane: 
+  - spawnInLane: 0003
     fractionCount: 1
     waitFraction: 2
-  - spawnInLane: 
+  - spawnInLane: 0003
     fractionCount: 1
     waitFraction: 4
-  - spawnInLane: 
+  - spawnInLane: 0002
     fractionCount: 1
     waitFraction: 4
-  - spawnInLane: "\x01\x03"
+  - spawnInLane: 0103
     fractionCount: 3
     waitFraction: 4
-  - spawnInLane: "\x02"
+  - spawnInLane: 02
     fractionCount: 1
     waitFraction: 4
-  - spawnInLane: 
+  - spawnInLane: 0003
     fractionCount: 1
     waitFraction: 2
-  - spawnInLane: 
+  - spawnInLane: 0003
     fractionCount: 1
     waitFraction: 4
-  - spawnInLane: "\x01\x03"
+  - spawnInLane: 0103
     fractionCount: 1
     waitFraction: 4
-  - spawnInLane: 
+  - spawnInLane: 0002
     fractionCount: 1
     waitFraction: 2
-  - spawnInLane: "\x01"
+  - spawnInLane: 01
     fractionCount: 1
     waitFraction: 2
-  - spawnInLane: 
+  - spawnInLane: 0003
     fractionCount: 1
     waitFraction: 2
-  - spawnInLane: 
+  - spawnInLane: 0003
     fractionCount: 1
     waitFraction: 4
-  - spawnInLane: 
+  - spawnInLane: 0002
     fractionCount: 1
     waitFraction: 4
-  - spawnInLane: "\x01\x03"
+  - spawnInLane: 0103
     fractionCount: 1
     waitFraction: 2
-  - spawnInLane: "\x02"
+  - spawnInLane: 02
     fractionCount: 1
     waitFraction: 2
-  - spawnInLane: 
+  - spawnInLane: 0003
     fractionCount: 1
     waitFraction: 2
-  - spawnInLane: 
+  - spawnInLane: 0003
     fractionCount: 1
     waitFraction: 4
-  - spawnInLane: "\x01\x03"
+  - spawnInLane: 0103
     fractionCount: 1
     waitFraction: 4
-  - spawnInLane: 
+  - spawnInLane: 0002
     fractionCount: 1
     waitFraction: 2
-  - spawnInLane: "\x01"
+  - spawnInLane: 01
     fractionCount: 1
     waitFraction: 2
-  - spawnInLane: "\x03"
+  - spawnInLane: 03
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x02"
+  - spawnInLane: 02
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x01"
+  - spawnInLane: 01
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: 
+  - spawnInLane: 00
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x03"
+  - spawnInLane: 03
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x02"
+  - spawnInLane: 02
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x01"
+  - spawnInLane: 01
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: 
+  - spawnInLane: 00
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x03"
+  - spawnInLane: 03
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x02"
+  - spawnInLane: 02
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x01"
+  - spawnInLane: 01
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: 
+  - spawnInLane: 00
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x03"
+  - spawnInLane: 03
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x02"
+  - spawnInLane: 02
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x01"
+  - spawnInLane: 01
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: 
+  - spawnInLane: 00
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x03"
+  - spawnInLane: 03
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: 
+  - spawnInLane: 00
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x03"
+  - spawnInLane: 03
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: 
+  - spawnInLane: 00
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x03"
+  - spawnInLane: 03
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: 
+  - spawnInLane: 00
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x03"
+  - spawnInLane: 03
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: 
+  - spawnInLane: 00
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x02"
+  - spawnInLane: 02
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x01"
+  - spawnInLane: 01
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x02"
+  - spawnInLane: 02
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x01"
+  - spawnInLane: 01
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x02"
+  - spawnInLane: 02
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x01"
+  - spawnInLane: 01
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x02"
+  - spawnInLane: 02
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x01"
+  - spawnInLane: 01
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x03"
+  - spawnInLane: 03
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x02"
+  - spawnInLane: 02
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x01"
+  - spawnInLane: 01
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: 
+  - spawnInLane: 00
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x03"
+  - spawnInLane: 03
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x02"
+  - spawnInLane: 02
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x01"
+  - spawnInLane: 01
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: 
+  - spawnInLane: 00
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x03"
+  - spawnInLane: 03
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x02"
+  - spawnInLane: 02
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x01"
+  - spawnInLane: 01
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: 
+  - spawnInLane: 00
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x03"
+  - spawnInLane: 03
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x02"
+  - spawnInLane: 02
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x01"
+  - spawnInLane: 01
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: 
+  - spawnInLane: 00
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x02"
+  - spawnInLane: 02
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x01"
+  - spawnInLane: 01
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x02"
+  - spawnInLane: 02
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x01"
+  - spawnInLane: 01
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x02"
+  - spawnInLane: 02
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x01"
+  - spawnInLane: 01
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x02"
+  - spawnInLane: 02
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x01"
+  - spawnInLane: 01
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x03"
+  - spawnInLane: 03
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: 
+  - spawnInLane: 00
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x03"
+  - spawnInLane: 03
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: 
+  - spawnInLane: 00
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x03"
+  - spawnInLane: 03
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: 
+  - spawnInLane: 00
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x03"
+  - spawnInLane: 03
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: 
+  - spawnInLane: 00
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x03"
+  - spawnInLane: 03
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x02"
+  - spawnInLane: 02
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x01"
+  - spawnInLane: 01
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: 
+  - spawnInLane: 00
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x03"
+  - spawnInLane: 03
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x02"
+  - spawnInLane: 02
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x01"
+  - spawnInLane: 01
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: 
+  - spawnInLane: 00
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x03"
+  - spawnInLane: 03
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x02"
+  - spawnInLane: 02
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x01"
+  - spawnInLane: 01
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: 
+  - spawnInLane: 00
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x03"
+  - spawnInLane: 03
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x02"
+  - spawnInLane: 02
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x01"
+  - spawnInLane: 01
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: 
+  - spawnInLane: 00
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x02"
+  - spawnInLane: 02
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: 
+  - spawnInLane: 00
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x02"
+  - spawnInLane: 02
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: 
+  - spawnInLane: 00
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x02"
+  - spawnInLane: 02
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: 
+  - spawnInLane: 00
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x02"
+  - spawnInLane: 02
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: 
+  - spawnInLane: 00
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x02"
+  - spawnInLane: 02
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: 
+  - spawnInLane: 00
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x02"
+  - spawnInLane: 02
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: 
+  - spawnInLane: 00
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x02"
+  - spawnInLane: 02
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: 
+  - spawnInLane: 00
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x02"
+  - spawnInLane: 02
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: 
+  - spawnInLane: 00
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x03"
+  - spawnInLane: 03
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x02"
+  - spawnInLane: 02
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x01"
+  - spawnInLane: 01
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: 
+  - spawnInLane: 00
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x03"
+  - spawnInLane: 03
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x02"
+  - spawnInLane: 02
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x01"
+  - spawnInLane: 01
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: 
+  - spawnInLane: 00
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x03"
+  - spawnInLane: 03
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x02"
+  - spawnInLane: 02
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x01"
+  - spawnInLane: 01
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: 
+  - spawnInLane: 00
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x03"
+  - spawnInLane: 03
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x02"
+  - spawnInLane: 02
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x01"
+  - spawnInLane: 01
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: 
+  - spawnInLane: 00
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x03"
+  - spawnInLane: 03
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x01"
+  - spawnInLane: 01
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x03"
+  - spawnInLane: 03
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x01"
+  - spawnInLane: 01
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x03"
+  - spawnInLane: 03
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x01"
+  - spawnInLane: 01
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x03"
+  - spawnInLane: 03
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x01"
+  - spawnInLane: 01
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x03"
+  - spawnInLane: 03
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x01"
+  - spawnInLane: 01
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x03"
+  - spawnInLane: 03
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x01"
+  - spawnInLane: 01
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x03"
+  - spawnInLane: 03
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x01"
+  - spawnInLane: 01
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x03"
+  - spawnInLane: 03
     fractionCount: 1
     waitFraction: 16
-  - spawnInLane: "\x01"
+  - spawnInLane: 01
     fractionCount: 1
     waitFraction: 16
 --- !u!198 &1684009628 stripped
@@ -3566,6 +3571,32 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7721952671403139350, guid: aecdc3bcffb3f914bb4b560dff9c84a4, type: 3}
   m_PrefabInstance: {fileID: 262157568}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1903014105 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6017629325971450618, guid: 448f9d5eea8ec044ca555f92c52fd88e, type: 3}
+  m_PrefabInstance: {fileID: 1540533136}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1903014107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1903014105}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bde9e16c4cef8b9489cff9814af80587, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mapData: {fileID: 1540533139}
+  currentBeat: 0
+  playMapOnPlay: 1
+  quarterBeatDistance: 0.01
+  disableHitLine: 0
+  disableQuarterBeats: 0
+  disableLanes: 0
+  disableNotes: 0
+  mainCamera: {fileID: 519420031}
 --- !u!1 &1910016961
 GameObject:
   m_ObjectHideFlags: 0
