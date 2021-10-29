@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Effects;
 using TMPro;
 using UnityEngine;
 
@@ -7,9 +8,6 @@ namespace Notes
 {
     public class ActivateZone : MonoBehaviour
     {
-        // Components
-        private SystemInput m_InputSystem;
-
         // Lists
         [Header("Lists")]
         public List<GameObject> notes;
@@ -23,7 +21,7 @@ namespace Notes
 
         [Header("Combo")]
         public int comboCounter;
-        private int comboMultiplier = 1;
+        private int m_ComboMultiplier = 1;
 
         //Score
         // Score per hit
@@ -45,17 +43,26 @@ namespace Notes
         [SerializeField] private GameObject leftMiddlePosition;
         [SerializeField] private GameObject rightMiddlePosition;
         [SerializeField] private GameObject rightRightPosition;
-        [SerializeField] private GameObject[] positions;
-        
+
         [SerializeField] private GameObject missPosition;
     
-        void Awake()
+        // Components
+        private SystemInput m_InputSystem;
+        
+        
+        private SoundEffects m_Sound;
+        
+        private void Awake()
         {
             m_InputSystem = GetComponent<SystemInput>();
+            
+            
+            m_Sound = GetComponent<SoundEffects>();
         }
-    
-        void Update()
+        
+        private void Update()
         {
+            // Todo: LightEffects for button presses
             if (m_InputSystem.leftLeft)
             {
                 CheckTiming(leftLeftPosition.transform.position);
@@ -87,7 +94,9 @@ namespace Notes
                 {
                     if (Math.Abs(notes[i].transform.position.y - position.y) < perfectRange)
                     {
-                        // TODO: Particle here in LeftLeft//
+                        // TODO: Particle here
+                        // TODO: Sound Effects Here ??DONE??
+
                         Destroy(notes[i]);
                         notes.RemoveAt(i);
 
@@ -122,7 +131,7 @@ namespace Notes
                 {
                     Destroy(notes[i]);
                     notes.RemoveAt(i);
-                    ScoreRangeInput("Miss");
+                    Combo("Miss");
                 }
             }
         }
@@ -130,6 +139,8 @@ namespace Notes
         // SCORE INPUTS //
         private void ScoreRangeInput(string scoreRange)
         {
+            m_Sound.HitSound();
+            
             if (scoreRange == "Perfect")
             {
                 // TODO: Spawn The Word Sprites plus Particles When they're Hit
@@ -168,7 +179,8 @@ namespace Notes
             if (comboRange is "Bad" or "Miss")
             {
                 comboCounter = 0;
-
+                
+                // Todo: LightEffects for Miss
                 Score(comboRange == "Miss" ? "Miss" : "Bad");
             }
 
@@ -176,19 +188,19 @@ namespace Notes
             
             if (comboCounter >= 50)
             {
-                comboMultiplier = 8;
+                m_ComboMultiplier = 8;
             }
             else if (comboCounter >= 25)
             {
-                comboMultiplier = 4;
+                m_ComboMultiplier = 4;
             }
             else if (comboCounter >= 10)
             {
-                comboMultiplier = 2;
+                m_ComboMultiplier = 2;
             }
             else
             {
-                comboMultiplier = 1;
+                m_ComboMultiplier = 1;
             }
             //comboMultiplierText.text = comboMultiplier.ToString();
         }
@@ -199,15 +211,15 @@ namespace Notes
         {
             if (scoreRange == "Perfect")
             {
-                scoreCounter = (perfectScore * comboMultiplier) + scoreCounter;
+                scoreCounter = (perfectScore * m_ComboMultiplier) + scoreCounter;
             }
             if (scoreRange == "Good")
             {
-                scoreCounter = (goodScore * comboMultiplier) + scoreCounter;
+                scoreCounter = (goodScore * m_ComboMultiplier) + scoreCounter;
             }
             if (scoreRange == "Bad")
             {
-                scoreCounter = (badScore * comboMultiplier) + scoreCounter;
+                scoreCounter = (badScore * m_ComboMultiplier) + scoreCounter;
             }
 
             if (scoreRange == "Miss")
@@ -220,7 +232,7 @@ namespace Notes
         private void TextUpdates()
         {
             comboText.text = comboCounter.ToString();
-            comboMultiplierText.text = comboMultiplier.ToString();
+            comboMultiplierText.text = m_ComboMultiplier.ToString();
             scoreText.text = scoreCounter + " P";
         }
     }

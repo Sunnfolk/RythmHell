@@ -141,7 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9723bf2332448b47ad2baec0e9f7877, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mapData: {fileID: 0}
+  mapData: {fileID: 8578570275228251952, guid: 72b45a77844c4e147973faf2bad90510, type: 3}
   currentBeat: 0
   playMapOnPlay: 1
   quarterBeatDistance: 1

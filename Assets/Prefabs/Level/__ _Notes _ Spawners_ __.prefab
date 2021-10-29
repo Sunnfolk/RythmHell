@@ -780,10 +780,10 @@ MonoBehaviour:
   mapData: {fileID: 6017629326342364428}
   activateZone: {fileID: 0}
   notePrefabs:
+  - {fileID: 7721952671403139350, guid: 521cebc6803f3324aa4f1c03f1d6c6b5, type: 3}
   - {fileID: 7721952671403139350, guid: 4d63e2fbfc9e98c428c1c50efc8f70cc, type: 3}
-  - {fileID: 7721952671403139350, guid: 4d63e2fbfc9e98c428c1c50efc8f70cc, type: 3}
-  - {fileID: 7721952671403139350, guid: 4d63e2fbfc9e98c428c1c50efc8f70cc, type: 3}
-  - {fileID: 7721952671403139350, guid: 4d63e2fbfc9e98c428c1c50efc8f70cc, type: 3}
+  - {fileID: 7721952671403139350, guid: aecdc3bcffb3f914bb4b560dff9c84a4, type: 3}
+  - {fileID: 7721952671403139350, guid: dd7c89602a89b7f47a3916fe1a380651, type: 3}
   spawners:
   - {fileID: 6017629325557631463}
   - {fileID: 6017629326514599670}
