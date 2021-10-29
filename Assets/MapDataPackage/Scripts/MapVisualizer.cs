@@ -53,7 +53,7 @@ public class MapVisualizer : MonoBehaviour
     }
 }
 
-[CustomEditor(typeof(MapVisualizer))]
+/*[CustomEditor(typeof(MapVisualizer))]
 public class MapVisualizerEditor : Editor
 {
     public void OnSceneGUI()
@@ -126,5 +126,5 @@ public class MapVisualizerEditor : Editor
                 }
             }
         }
-    }
-}
+    }*/
+//}

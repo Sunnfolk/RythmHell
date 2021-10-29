@@ -157,7 +157,7 @@ namespace Notes
         {
             for (int i = 0; i < notes.Count; i++)
             {
-                if (notes[i].transform.position.y <= missPosition.transform.position.y)
+                if (notes[i].transform.position.y <= missPosition.transform.position.y-3)
                 {
                     Destroy(notes[i]);
                     notes.RemoveAt(i);
